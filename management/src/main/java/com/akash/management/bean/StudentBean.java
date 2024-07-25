@@ -2,7 +2,7 @@ package com.akash.management.bean;
 
 public class StudentBean {
 
-	private String rollNo;
+	private int rollNo;
 	private String firstName;
 	private String lastName;
 	private String emailId;
@@ -11,7 +11,7 @@ public class StudentBean {
 		super();
 	}
 
-	public StudentBean(String rollNo, String firstName, String lastName, String emailId) {
+	public StudentBean(int rollNo, String firstName, String lastName, String emailId) {
 		super();
 		this.rollNo = rollNo;
 		this.firstName = firstName;
@@ -19,11 +19,11 @@ public class StudentBean {
 		this.emailId = emailId;
 	}
 
-	public String getRollNo() {
+	public int getRollNo() {
 		return rollNo;
 	}
 
-	public void setRollNo(String rollNo) {
+	public void setRollNo(int rollNo) {
 		this.rollNo = rollNo;
 	}
 
