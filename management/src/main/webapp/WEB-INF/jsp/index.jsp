@@ -15,8 +15,8 @@
       <nav>
         <ul>
           <li><a href="http://localhost:8080/stud/home">Home</a></li>
-          <li><a href="#" onclick="loadDoc('GET', '/stud/student', 'content')">ADD Student</a></li>
-          <li><a href="#" onclick="loadDoc('GET', '/stud/getStudList', 'content')">Student Details</a></li>
+          <li><a href="#" onclick="loadDoc('GET', '/stud/student', 'content',null)">ADD Student</a></li>
+          <li><a href="#" onclick="loadDoc('GET', '/stud/getStudList', 'content',null)">Student Details</a></li>
         </ul>
       </nav>
     </header>

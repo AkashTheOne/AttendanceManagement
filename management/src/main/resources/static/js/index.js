@@ -24,13 +24,14 @@ function onSaveData(event) {
       return false;
     }
 
-    let param = 'firstName='+firstName+'&lastName='+lastName+'&emailId='+emailId+'&rollNo='+rollNo;
-    let url="http://localhost:8080/stud/home";
-    loadDoc("GET", url, "", "")
+     let param = 'firstName='+firstName+'&lastName='+lastName+'&emailId='+emailId+'&rollNo='+rollNo;
+    // let url="http://localhost:8080/stud/home";
+    
+    loadDoc("POST", "/stud/saveStudent", "content", param);
   }
 
 
-function loadDoc(method, url, id, params = null) {
+function loadDoc(method, url, id, params) {
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {

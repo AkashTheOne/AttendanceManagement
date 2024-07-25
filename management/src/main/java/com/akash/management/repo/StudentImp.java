@@ -18,13 +18,13 @@ public class StudentImp implements StudentRepo{
 		StringBuilder query = new StringBuilder();
 		
 		query.append("INSERT INTO STUDENTS (ROLLNO, FIRSTNAME, LASTNAME, EMAILID)");
-		query.append("VALUE(:ROLLNO, :FIRSTNAME, :LASTNAME, :EMAILID)");
+		query.append("VALUES (:ROLLNO, :FIRSTNAME, :LASTNAME, :EMAILID)");
 		
 		Map<String, Object> paramMap = new HashMap<>();
-        paramMap.put("rollNo", bean.getRollNo());
-        paramMap.put("firstName", bean.getFirstName());
-        paramMap.put("lastName", bean.getLastName());
-        paramMap.put("emailId", bean.getEmailId());
+        paramMap.put("ROLLNO", Integer.valueOf(bean.getRollNo()));
+        paramMap.put("FIRSTNAME", bean.getFirstName());
+        paramMap.put("LASTNAME", bean.getLastName());
+        paramMap.put("EMAILID", bean.getEmailId());
 
         namedParameterJdbcTemplate.update(query.toString(), paramMap);
 				
