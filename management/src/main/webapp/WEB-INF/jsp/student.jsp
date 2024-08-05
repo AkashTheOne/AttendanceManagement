@@ -32,7 +32,7 @@
                     </tr>
                     <tr>
                         <td colspan="5">
-                            <button type="submit" value="submit" onclick="return onSaveData(event)">Submit</button>
+                            <button type="button" value="submit" onclick="return onSaveData(event)">Submit</button>
                             <button type="reset" value="reset">Reset</button>
                         </td>
                     </tr>

@@ -4,14 +4,14 @@
 
   <head>
     <meta charset="ISO-8859-1" />
-    <title>Insert title here</title>
+    <title>Attendance Management</title>
     <link rel="stylesheet" href="/css/index.css" />
     <script src="/js/index.js"></script>
   </head>
 
   <body>
     <header>
-      <h1>Student Management System</h1>
+      <h1>Attendance Management System</h1>
       <nav>
         <ul>
           <li><a href="http://localhost:8080/stud/home">Home</a></li>
@@ -21,34 +21,24 @@
       </nav>
     </header>
     <section id="content">
-      <div style="text-align: center; padding-top: 10%;">
+      <div id="main-div">
         <h1>Welcome to the Attendance Management System</h1>
       </div>
     </section>
     <footer>
       <div id="footer">
-        <span>Student Management</span>
-        <span>Student Managements</span>
-        <span>Student Management</span>
-        <span>Student Management</span>
+      <div><span>Get to Know Us</span></div>
+        <span>About Us</span>
+        <span>Careers</span>
+        <span>Careers</span>
+        <span>Careers</span>
       </div>
       <div id="footer">
-        <span>Student Management</span>
-        <span>Student Management</span>
-        <span>Student Management</span>
-        <span>Student Management</span>
-      </div>
-      <div id="footer">
-        <span>Student Management</span>
-        <span>Student Management</span>
-        <span>Student Management</span>
-        <span>Student Management</span>
-      </div>
-      <div id="footer">
-        <span>Student Management</span>
-        <span>Student Management</span>
-        <span>Student Management</span>
-        <span>Student Management</span>
+      <div><span>Connect with Us</span></div>
+        <span>Facebook</span>
+        <span>Twitter</span>
+        <span>Instagram</span>
+        <span>YouTube</span>
       </div>
     </footer>
   </body>

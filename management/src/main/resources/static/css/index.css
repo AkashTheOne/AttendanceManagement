@@ -1,63 +1,67 @@
 header h1 {
-  text-align: center;
-  background-color: rgb(3, 149, 233);
-  border: 1px solid #313030;
+	text-align: center;
+	background-color: #0d6efd;
+	border: 1px solid #313030;
 }
 
 ul {
-  display: flex;
-  justify-content: space-evenly;
-  background-color: rgb(131, 125, 125);
-  color: white;
-  height: 4%;
-  font-weight: bold;
+	display: flex;
+	justify-content: space-evenly;
+	background-color: rgb(131, 125, 125);
+	color: white;
+	height: 4%;
+	font-weight: bold;
 }
 
 ul li {
-  list-style-type: none; /* Remove default list bullets */
+	list-style-type: none; /* Remove default list bullets */
 }
 
 li a {
-  text-decoration: none;
-  color: white;
-  display: block;
+	text-decoration: none;
+	color: white;
+	display: block;
 }
 
 footer {
-  background-color: black;
-  color: white;
-  padding: 15px;
-  display: grid;
-  grid-template-columns: 3fr 3fr 3fr 3fr;
-  font-size: 16px;
-  font-family: Arial;
-  padding-left: 10%;
+	background-color: black;
+	color: white;
+	padding: 15px;
+	display: grid;
+	grid-template-columns: 3fr 3fr 3fr 3fr;
+	font-size: 16px;
+	font-family: Arial;
+	padding-left: 10%;
 }
 
 .box {
-  position: absolute;
-  top: 20%;
-  left: 25%;
-  padding: 40px;
-  width: 50%;
-  box-shadow: 0px 5px 20px rgb(218, 198, 198);
+	position: absolute;
+	top: 20%;
+	left: 25%;
+	padding: 40px;
+	width: 50%;
+	box-shadow: 0px 5px 20px rgb(218, 198, 198);
 }
 
 form {
-  text-align: center;
+	text-align: center;
 }
 
-.tablecss th,
-td {
-  padding: 8px;
-  width: 64%;
+.tablecss th, td {
+	padding: 8px;
+	width: 64%;
 }
 
 footer span {
-  display: block;
-  margin-top: 40px;
+	display: block;
+	margin-top: 40px;
 }
 
 section {
-  height: 400px;
+	height: 400px;
+}
+
+#main-div {
+	text-align: center;
+	padding-top: 10%;
 }
