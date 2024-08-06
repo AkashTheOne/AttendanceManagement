@@ -63,27 +63,26 @@ public class StudentImp implements StudentRepo {
 				: "Student data not updated successfully";
 	}
 
-	public String checkStudentRoll(StudentBean bean) {
-
-		StringBuilder query = new StringBuilder();
-		query.append("SELECT COUNT(*) FROM STUDENTS WHERE WHERE ROLLNO = :ROLLNO");
-
-		Map<String, Object> paramMap = new HashMap<>();
-		paramMap.put("ROLLNO", Integer.valueOf(bean.getRollNo()));
-
-		int count = namedParameterJdbcTemplate.queryForObject(query.toString(), paramMap, Integer.class);
-		return count > 0 ? "" : "Roll number does not exist";
-	}
-
-	
-    public List<Map<String, Object>> fetchStudentData(String rollNo) {
+	public List<Map<String, Object>> fetchStudentData(String rollNo) {
 		String query = """
 				SELECT ROLLNO, FIRSTNAME, LASTNAME, EMAILID FROM STUDENTS WHERE ROLLNO = :ROLLNO
 				""";
 
-        Map<String, Object> paramMap = new HashMap<>();
-        paramMap.put("ROLLNO", Integer.valueOf(rollNo));
+		Map<String, Object> paramMap = new HashMap<>();
+		paramMap.put("ROLLNO", Integer.valueOf(rollNo));
 
-        return namedParameterJdbcTemplate.queryForList(query, paramMap);
-    }
+		return namedParameterJdbcTemplate.queryForList(query, paramMap);
+	}
+
+	@Override
+	public void deleteStudentData(String rollNO) {
+		String query = """
+				DELETE FROM STUDENTS WHERE ROLLNO = :ROLLNO
+				""";
+		Map<String, Object> paramMap = new HashMap<>();
+		paramMap.put("ROLLNO", Integer.valueOf(rollNO));
+
+		namedParameterJdbcTemplate.update(query, paramMap);
+
+	}
 }

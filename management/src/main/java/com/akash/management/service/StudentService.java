@@ -38,14 +38,6 @@ public class StudentService {
 	public String updateStudentData(StudentBean bean) {
 		return repo.updateStudentData(bean);
 	}
-	
-	public String checkStudentRoll(StudentBean bean) {
-		String checkStudentRoll = repo.checkStudentRoll(bean);
-		if(!checkStudentRoll.isEmpty()) {
-			return checkStudentRoll;
-		}
-		return "";
-	}
 
 	public List<Map<String, Object>> fetchStudentData(String rollNo) {
 		List<Map<String, Object>> studentData = null;
@@ -57,6 +49,11 @@ public class StudentService {
 			logger.error("Exception occured in StudentService class method getStudentData ",e);
 		}
 		return studentData;
+		
+	}
+
+	public void deleteStudentData(String rollNO) {
+		repo.deleteStudentData(rollNO);
 		
 	}
 	

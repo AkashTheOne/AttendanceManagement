@@ -58,13 +58,7 @@ public class StudentController {
 	}
 
 	@GetMapping("/editStudent")
-	public String showEditStudentForm(Model map) {
-		map.addAttribute("editdataMap", "data");
-		return "editStudent";
-	}
-
-	@GetMapping("/fetchStudentData")
-	public String fetchStudentData(HttpServletResponse response,HttpServletRequest request, Model map) {
+	public String showEditStudentForm(HttpServletResponse response,HttpServletRequest request, Model map) {
 		logger.info("getRollNo data {}", request.getParameter("rollNo"));
 		List<Map<String, Object>> fetchStudentData = service.fetchStudentData(request.getParameter("rollNo"));
 		map.addAttribute("students", fetchStudentData);
@@ -79,6 +73,17 @@ public class StudentController {
 		map.addAttribute("dataMap", "data");
 		
 		return "editStudent";
+	}
+	
+	@PostMapping("/deleteStudent")
+	public String deleteStudentData(HttpServletResponse response,HttpServletRequest request,StudentBean bean, Model map) {
+		logger.info("getRollNo data {}", request.getParameter("rollNo"));
+		service.deleteStudentData(request.getParameter("rollNo"));
+		
+		List<Map<String, Object>> studentData = service.getStudentData();
+		map.addAttribute("students", studentData);
+		
+		return "studentList";
 	}
 
 }

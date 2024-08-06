@@ -13,8 +13,8 @@ public interface StudentRepo{
 
 	public String updateStudentData(StudentBean bean);
 	
-	public String checkStudentRoll(StudentBean bean);
-
 	public List<Map<String, Object>> fetchStudentData(String rollNo);
+
+	public void deleteStudentData(String rollNO);
 	
 }

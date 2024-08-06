@@ -29,7 +29,7 @@
 							<td>${student.FIRSTNAME}</td>
 							<td>${student.LASTNAME}</td>
 							<td>${student.EMAILID}</td>
-							<td><a href="#" onclick="onEditData(${student.ROLLNO})">Edit</a> | <a href="#">Delete</a></td>
+							<td><a href="#" onclick="onEditData(${student.ROLLNO})">Edit</a> | <a href="#" onclick="onDeleteData(${student.ROLLNO})">Delete</a></td>
 						</tr>
 					</c:forEach>
 				</tbody>

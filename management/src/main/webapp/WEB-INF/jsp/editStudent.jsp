@@ -46,8 +46,9 @@
 		</div>
 	</c:when>
 	<c:when test="${dataMap == 'data'}">
-		<div>
-			<input type="hidden" value="${updateDataMap}" id="updateData">
+		<div style="text-align: center; padding: 8%; box-shadow: 1px 8px 27px 2px cornflowerblue; width: 44%;
+    				font-size: 34px; margin: auto; margin-top: 120px;">
+			<p id="updateData">${updateDataMap}</p>
 		</div>
 	</c:when>
 </c:choose>

@@ -33,30 +33,28 @@ function onSaveData(event) {
 
 
 function loadDoc(method, url, id, params) {
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function() {
-        if (this.readyState == 4) {
-            if (this.status == 200) {
-                document.getElementById(id).innerHTML = this.responseText;
-                console.log("Response received and content updated.");
-            } else {
-                console.error('Error: ' + this.status + ' - ' + this.statusText);
-            }
-        }
-    };
-    xhttp.open(method, url, true);
-    if (method === 'POST') {
-        xhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-    }
-    xhttp.send(params);
+	var xhttp = new XMLHttpRequest();
+	xhttp.onreadystatechange = function() {
+		if (this.readyState == 4) {
+			if (this.status == 200) {
+				document.getElementById(id).innerHTML = this.responseText;
+				console.log("Response received and content updated.");
+			} else {
+				console.error('Error: ' + this.status + ' - ' + this.statusText);
+			}
+		}
+	};
+	xhttp.open(method, url, true);
+	if (method === 'POST') {
+		xhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+	}
+	xhttp.send(params);
 }
 
 
 function onEditData(id) {
 	let rollNo = id;
-	loadDoc("GET", "/stud/editStudent", "content", null);
-	
-	loadDoc("GET", "/stud/fetchStudentData?rollNo="+rollNo, "content", null);
+	loadDoc("GET", "/stud/editStudent?rollNo=" + rollNo, "content", null);
 }
 
 function onClickBack() {
@@ -86,13 +84,14 @@ function onUpdateData() {
 	}
 
 	let param = 'firstName=' + firstName + '&lastName=' + lastName + '&emailId=' + emailId + '&rollNo=' + rollNo;
-	
+
 	loadDoc("POST", "/stud/updateStudent", "content", param);
-	
-	alert(document.getElementById('updateData').value);
-	let msg =document.getElementById('updateData').value;
-	if(msg!==''){
-		alert(msg);
-	}
+
+}
+
+function onDeleteData(id) {
+	alert(id);
+	let rollNo = id;
+	loadDoc("POST", "/stud/deleteStudent?rollNo=" + rollNo, "content", null);
 }
 
